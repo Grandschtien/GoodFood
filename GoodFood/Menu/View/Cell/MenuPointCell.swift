@@ -28,6 +28,7 @@ class MenuPointCell: UICollectionViewCell {
         self.rating.text = menuPoint.rating ?? "0" + "/5"
         //TODO: Сделать через тип data
         self.image.image = UIImage(named: menuPoint.image ?? "")
+        self.image.contentMode = .scaleAspectFill
         
         //Внешний вид ячейки
         

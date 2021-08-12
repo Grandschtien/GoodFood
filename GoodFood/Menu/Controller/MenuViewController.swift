@@ -62,16 +62,14 @@ extension MenuViewController {
     private func createMenuPointSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(150))
-        
-        
+        item.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(200))
+    
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
         
         group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
         let section = NSCollectionLayoutSection(group: group)
-        section.interGroupSpacing = 10
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0)
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: MenuViewController.sectionBackgroundDecorationElementKind)
         sectionBackgroundDecoration.contentInsets = NSDirectionalEdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0)
         section.decorationItems = [sectionBackgroundDecoration]
