@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MenuPointCell" customModule="GoodFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="161"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="JkW-X4-jjp">
+                        <rect key="frame" x="145" y="25" width="213" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Курица гриль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUs-BI-Jka">
+                                <rect key="frame" x="0.0" y="0.0" width="213" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25-30 мин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-R4-7yg">
+                                <rect key="frame" x="0.0" y="31.5" width="213" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сложность: 7/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJC-Tb-dZ9">
+                                <rect key="frame" x="0.0" y="63" width="213" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг: 5/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c90-oo-Sg8">
+                                <rect key="frame" x="0.0" y="94.5" width="213" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJs-oe-hGy">
+                        <rect key="frame" x="20" y="25" width="110" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="Mqh-I6-RsP"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="JkW-X4-jjp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="5IS-k2-A4x"/>
+                <constraint firstAttribute="trailing" secondItem="JkW-X4-jjp" secondAttribute="trailing" id="6PD-ao-0xL"/>
+                <constraint firstItem="tJs-oe-hGy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="TQ8-tF-VM9"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="tJs-oe-hGy" secondAttribute="bottom" constant="26" id="cDo-u7-g28"/>
+                <constraint firstItem="JkW-X4-jjp" firstAttribute="leading" secondItem="tJs-oe-hGy" secondAttribute="trailing" constant="15" id="iRb-mM-wuR"/>
+                <constraint firstItem="tJs-oe-hGy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="mdM-bQ-Z3b"/>
+            </constraints>
+            <size key="customSize" width="358" height="161"/>
+            <connections>
+                <outlet property="difficulty" destination="lJC-Tb-dZ9" id="Del-gg-E3m"/>
+                <outlet property="image" destination="tJs-oe-hGy" id="gvW-7L-9FC"/>
+                <outlet property="name" destination="oUs-BI-Jka" id="V5D-La-dEC"/>
+                <outlet property="rating" destination="c90-oo-Sg8" id="SDX-IS-F0g"/>
+                <outlet property="time" destination="1wE-R4-7yg" id="mUW-TK-apq"/>
+            </connections>
+            <point key="canvasLocation" x="266.66666666666669" y="123.54910714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>
