@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum MenuType: String {
+    case Menu
+    case Header
+}
+
 class MenuViewController: UIViewController {
     
     private var menuCollection: UICollectionView! = nil
@@ -14,7 +19,12 @@ class MenuViewController: UIViewController {
     private static let sectionBackgroundDecorationElementKind = "background-element-kind"
     private static let sectionHeaderElementKind = "section-header-element-kind"
     
-    private var menuPoints = Bundle.main.decode([MenuModel].self, from: "Menu.json")
+    private var menuPoints = Bundle.main.decode([MenuModel].self, from: "Menu.json").filter { menuModel in
+        return menuModel.type == MenuType.Menu.rawValue
+    }
+    private var headerPoints = Bundle.main.decode([MenuModel].self, from: "Menu.json").filter { menuModel in
+        return menuModel.type == MenuType.Header.rawValue
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,21 +70,25 @@ extension MenuViewController {
 //MARK:- Create Sections
 extension MenuViewController {
     private func createMenuPointSection() -> NSCollectionLayoutSection {
+        
+        //Item
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(200))
-    
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
-        group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
+        //Group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.25))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        //Section
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0)
+        
+        //Section Decoration
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: MenuViewController.sectionBackgroundDecorationElementKind)
-        sectionBackgroundDecoration.contentInsets = NSDirectionalEdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0)
         section.decorationItems = [sectionBackgroundDecoration]
-        //        let header = createHeader()
-        //        section.boundarySupplementaryItems = [header]
+        let header = createHeader()
+        section.boundarySupplementaryItems = [header]
+        
         return section
     }
 }
@@ -84,10 +98,10 @@ extension MenuViewController {
 extension MenuViewController {
     private func configureDataSource() {
         
-        //        let headerRegistration =
-        //            UICollectionView.SupplementaryRegistration<SecondSectionHeader>(supplementaryNib: UINib(nibName: NibName.sectionHeader.rawValue, bundle: nil), elementKind: Self.sectionHeaderElementKind) {[weak self] header, string, indexPath in
-        //                header.sections = self?.sectionForHeader
-        //            }
+        let headerRegistration =
+            UICollectionView.SupplementaryRegistration<MenuHeaderReusbleView>(supplementaryNib: UINib(nibName: MenuHeaderReusbleView.nibName, bundle: nil), elementKind: Self.sectionHeaderElementKind) {[weak self] header, string, indexPath in
+                header.kitchens = self?.headerPoints
+            }
         
         
         let menuPointCellRegistration = UICollectionView.CellRegistration<MenuPointCell, MenuPoint>(cellNib: UINib(nibName: MenuPointCell.nibName, bundle: nil)) { cell, indexPath, menuPoint in
@@ -96,20 +110,19 @@ extension MenuViewController {
         
         self.dataSource = UICollectionViewDiffableDataSource<MenuModel, MenuPoint>(collectionView: menuCollection) {
             (collectionView: UICollectionView, indexPath: IndexPath, item: MenuPoint) -> UICollectionViewCell? in
-                return collectionView.dequeueConfiguredReusableCell(using: menuPointCellRegistration, for: indexPath, item: item)
+            return collectionView.dequeueConfiguredReusableCell(using: menuPointCellRegistration, for: indexPath, item: item)
         }
-        //TODO: Сделать заголовок
-        // Регистрация заголовка
-        //        self.dataSource.supplementaryViewProvider = {
-        //            collectionView, kind, indexPath in
-        //            print("kind \(kind) for section: \(indexPath.section) and item: \(indexPath.item)")
-        //            return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
-        //        }
+        
+        //Регистрация заголовка
+        self.dataSource.supplementaryViewProvider = {
+            collectionView, kind, indexPath in
+            return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
+        }
         
         var snapshot = NSDiffableDataSourceSnapshot<MenuModel, MenuPoint>()
         menuPoints.forEach { menu in
             snapshot.appendSections([menu])
-            snapshot.appendItems(menu.menuPoints, toSection: menu)
+            snapshot.appendItems(menu.menuPoints ?? [], toSection: menu)
         }
         
         dataSource?.apply(snapshot)
@@ -119,9 +132,24 @@ extension MenuViewController {
         var snapshot = NSDiffableDataSourceSnapshot<MenuModel, MenuPoint>()
         menuPoints.forEach { menu in
             snapshot.appendSections([menu])
-            snapshot.appendItems(menu.menuPoints, toSection: menu)
+            snapshot.appendItems(menu.menuPoints ?? [], toSection: menu)
         }
         
         dataSource?.apply(snapshot)
     }
 }
+
+
+extension MenuViewController {
+    private func createHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        header.pinToVisibleBounds = true
+        header.zIndex = 2
+        return header
+    }
+}
+
+//MARK:- SwiftUI Preview
+
+

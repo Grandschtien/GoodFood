@@ -9,6 +9,7 @@ import Foundation
 
 struct MenuModel: Hashable, Codable {
     var type: String
-    var menuPoints: [MenuPoint]
+    var menuPoints: [MenuPoint]?
+    var headerItems: [HeaderItem]?
 }
 

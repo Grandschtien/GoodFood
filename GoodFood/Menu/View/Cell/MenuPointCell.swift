@@ -18,7 +18,7 @@ class MenuPointCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.layer.addBorder(edge: .bottom, color: #colorLiteral(red: 0.7620784104, green: 0.7620784104, blue: 0.7620784104, alpha: 1), thickness: 0.5)
     }
 
     func configure(menuPoint: MenuPoint) {
@@ -29,15 +29,14 @@ class MenuPointCell: UICollectionViewCell {
         //TODO: Сделать через тип data
         self.image.image = UIImage(named: menuPoint.image ?? "")
         self.image.contentMode = .scaleAspectFill
-        
+        self.image.clipsToBounds = true
         //Внешний вид ячейки
         
-        self.image.layer.cornerRadius = image.frame.height / 2
+        self.image.layer.cornerRadius = image.frame.width / 2
         
-        self.name.font.withSize(CGFloat(20))
+        self.name.font.withSize(CGFloat(25))
         self.time.font.withSize(CGFloat(15))
         self.difficulty.font.withSize(CGFloat(15))
-        self.layer.addBorder(edge: .bottom, color: #colorLiteral(red: 0.7620784104, green: 0.7620784104, blue: 0.7620784104, alpha: 1), thickness: 0.5)
 
     }
 }

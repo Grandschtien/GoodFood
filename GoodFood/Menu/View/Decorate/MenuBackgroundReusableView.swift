@@ -23,6 +23,6 @@ class MenuBackgroundReusableView: UICollectionReusableView {
 extension MenuBackgroundReusableView {
     private func configure() {
         self.backgroundColor = #colorLiteral(red: 0.974973079, green: 1, blue: 0.9689972778, alpha: 1)
-        self.layer.cornerRadius = 20
+        self.roundCorners(corners: [.topLeft, .topRight], radius: 15)
     }
 }

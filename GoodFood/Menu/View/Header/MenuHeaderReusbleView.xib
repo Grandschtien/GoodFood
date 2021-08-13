@@ -4,16 +4,43 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="MenuHeaderReusbleView" customModule="GoodFood" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="325" height="62"/>
             <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RcC-PR-X7M">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="62"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BL4-de-Roy">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="RcC-PR-X7M" secondAttribute="trailing" id="BTj-fh-X5z"/>
+                <constraint firstItem="RcC-PR-X7M" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="SeR-rb-zKy"/>
+                <constraint firstAttribute="bottom" secondItem="RcC-PR-X7M" secondAttribute="bottom" id="i1W-CA-rwc"/>
+                <constraint firstItem="RcC-PR-X7M" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="lSl-ye-vco"/>
+            </constraints>
+            <connections>
+                <outlet property="kitchenCollection" destination="RcC-PR-X7M" id="zuC-y9-aKQ"/>
+            </connections>
             <point key="canvasLocation" x="135.50724637681159" y="90.401785714285708"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
