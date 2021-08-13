@@ -11,12 +11,14 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    var searchController = UISearchController()
     private var menuPoints = Bundle.main.decode([MenuModel].self, from: "Menu.json").filter { menuModel in
         return menuModel.type == MenuType.Menu.rawValue
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.delegate = self
+        navigationItem.searchController = searchController
+        searchController.delegate = self
         tableView.dataSource = self
     }
 
@@ -37,5 +39,8 @@ extension SearchViewController: UITableViewDataSource {
         return cell
     }
     
+    
+}
+extension SearchViewController: UISearchControllerDelegate {
     
 }

@@ -24,7 +24,8 @@ class SearchCell: UITableViewCell {
         self.imageOfDish.image = UIImage(named: menuPoint.image ?? "photo.fill")
         
         //Настройки ячейки
-        self.imageView?.clipsToBounds = true
+        self.imageOfDish.contentMode = .scaleAspectFill
+        self.imageOfDish?.clipsToBounds = true
         self.imageOfDish.layer.cornerRadius = imageOfDish.frame.width / 2
     }
 }
