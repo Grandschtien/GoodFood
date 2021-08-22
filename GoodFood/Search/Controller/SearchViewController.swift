@@ -8,30 +8,38 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
     private var searchController = UISearchController()
-    private var segmentControl: UISegmentedControl! = nil
+    private var segmentedControl = UISegmentedControl(items: [
+        "С мясом",
+        "Без мяса"
+    ])
     private var menuPoints = Bundle.main.decode([MenuModel].self, from: "Menu.json").filter { menuModel in
         return menuModel.type == MenuType.Menu.rawValue
     }
     
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(UINib(nibName: SearchCell.nibName, bundle: nil), forCellReuseIdentifier: SearchCell.reuseId)
-        return tableView
-    }()
+    private let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.searchController = searchController
         searchController.delegate = self
         tableView.dataSource = self
+        setupTableView()
+        setupSegmentedControl()
+    }
+    private func setupTableView() {
+        tableView.register(UINib(nibName: SearchCell.nibName, bundle: nil), forCellReuseIdentifier: SearchCell.reuseId)
+        tableView.frame = view.bounds
         view.addSubview(tableView)
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
+    private func setupSegmentedControl() {
+        segmentedControl.selectedSegmentIndex = 0
+        navigationItem.titleView = segmentedControl
+        segmentedControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
     }
+    //TODO MAke segment control
+    @objc private func segmentChanged(_ sender: UISegmentedControl) { }
 }
 
 
@@ -51,18 +59,16 @@ extension SearchViewController: UITableViewDataSource {
     
     
 }
+
 extension SearchViewController: UISearchControllerDelegate {
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+       
+    }
 }
+
 
 extension SearchViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
-        return view
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
-    }
 }
+
