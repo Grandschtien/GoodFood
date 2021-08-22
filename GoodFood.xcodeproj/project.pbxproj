@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		602A494126C581B200C637D7 /* MenuBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A494026C581B200C637D7 /* MenuBackgroundReusableView.swift */; };
 		602A494326C5842B00C637D7 /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A494226C5842B00C637D7 /* CALayer + Extension.swift */; };
+		603E76FA26D2767300BE0FDD /* ShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E76F926D2767300BE0FDD /* ShadowExtension.swift */; };
+		603E76FD26D27E7300BE0FDD /* MenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E76FB26D27E7300BE0FDD /* MenuListCell.swift */; };
+		603E76FE26D27E7300BE0FDD /* MenuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603E76FC26D27E7300BE0FDD /* MenuListCell.xib */; };
 		605B31A626C6BEC500FBD49E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A526C6BEC500FBD49E /* CornerRadius.swift */; };
 		605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A826C6C3B300FBD49E /* HeaderCell.swift */; };
 		605B31AB26C6C3B300FBD49E /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605B31A926C6C3B300FBD49E /* HeaderCell.xib */; };
-		605B31B026C6D1B500FBD49E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31AF26C6D1B500FBD49E /* SearchCell.swift */; };
+		60D2843F26C80569006F490A /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2843D26C80569006F490A /* SearchCell.swift */; };
+		60D2844026C80569006F490A /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60D2843E26C80569006F490A /* SearchCell.xib */; };
 		60DF62CA26C1592100B8A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF62C926C1592100B8A83F /* AppDelegate.swift */; };
 		60DF62CC26C1592100B8A83F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF62CB26C1592100B8A83F /* SceneDelegate.swift */; };
 		60DF62CE26C1592100B8A83F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF62CD26C1592100B8A83F /* MenuViewController.swift */; };
@@ -37,10 +41,14 @@
 /* Begin PBXFileReference section */
 		602A494026C581B200C637D7 /* MenuBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackgroundReusableView.swift; sourceTree = "<group>"; };
 		602A494226C5842B00C637D7 /* CALayer + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Extension.swift"; sourceTree = "<group>"; };
+		603E76F926D2767300BE0FDD /* ShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowExtension.swift; sourceTree = "<group>"; };
+		603E76FB26D27E7300BE0FDD /* MenuListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCell.swift; sourceTree = "<group>"; };
+		603E76FC26D27E7300BE0FDD /* MenuListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuListCell.xib; sourceTree = "<group>"; };
 		605B31A526C6BEC500FBD49E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		605B31A826C6C3B300FBD49E /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		605B31A926C6C3B300FBD49E /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
-		605B31AF26C6D1B500FBD49E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		60D2843D26C80569006F490A /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		60D2843E26C80569006F490A /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		60DF62C626C1592100B8A83F /* GoodFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DF62C926C1592100B8A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60DF62CB26C1592100B8A83F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +97,27 @@
 				60F0E43326C5789C007412D4 /* Decoder.swift */,
 				602A494226C5842B00C637D7 /* CALayer + Extension.swift */,
 				605B31A526C6BEC500FBD49E /* CornerRadius.swift */,
+				603E76F926D2767300BE0FDD /* ShadowExtension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		603E76FF26D27F3100BE0FDD /* FirstExample */ = {
+			isa = PBXGroup;
+			children = (
+				60F0E42F26C576B1007412D4 /* MenuPointCell.swift */,
+				60F0E43026C576B1007412D4 /* MenuPointCell.xib */,
+			);
+			path = FirstExample;
+			sourceTree = "<group>";
+		};
+		603E770026D27F4700BE0FDD /* SecondExaple */ = {
+			isa = PBXGroup;
+			children = (
+				603E76FB26D27E7300BE0FDD /* MenuListCell.swift */,
+				603E76FC26D27E7300BE0FDD /* MenuListCell.xib */,
+			);
+			path = SecondExaple;
 			sourceTree = "<group>";
 		};
 		605B31A726C6C39F00FBD49E /* HeaderCell */ = {
@@ -105,7 +132,8 @@
 		605B31AD26C6CF5C00FBD49E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				605B31AF26C6D1B500FBD49E /* SearchCell.swift */,
+				60D2843D26C80569006F490A /* SearchCell.swift */,
+				60D2843E26C80569006F490A /* SearchCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,8 +288,8 @@
 		60F0E43926C57C8E007412D4 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				60F0E42F26C576B1007412D4 /* MenuPointCell.swift */,
-				60F0E43026C576B1007412D4 /* MenuPointCell.xib */,
+				603E770026D27F4700BE0FDD /* SecondExaple */,
+				603E76FF26D27F3100BE0FDD /* FirstExample */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -339,6 +367,8 @@
 				60F0E43226C576B1007412D4 /* MenuPointCell.xib in Resources */,
 				60F0E43626C57978007412D4 /* Menu.json in Resources */,
 				60DF62D326C1592300B8A83F /* Assets.xcassets in Resources */,
+				60D2844026C80569006F490A /* SearchCell.xib in Resources */,
+				603E76FE26D27E7300BE0FDD /* MenuListCell.xib in Resources */,
 				60DF62D126C1592100B8A83F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,18 +382,20 @@
 			files = (
 				60F0E42526C572B2007412D4 /* MenuModel.swift in Sources */,
 				60F0E42126C56E2D007412D4 /* ProfileViewController.swift in Sources */,
+				60D2843F26C80569006F490A /* SearchCell.swift in Sources */,
+				603E76FA26D2767300BE0FDD /* ShadowExtension.swift in Sources */,
 				60F0E42326C56E3E007412D4 /* SearchViewController.swift in Sources */,
 				605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */,
 				60F0E42726C57406007412D4 /* MenuPoint.swift in Sources */,
 				605B31A626C6BEC500FBD49E /* CornerRadius.swift in Sources */,
 				602A494126C581B200C637D7 /* MenuBackgroundReusableView.swift in Sources */,
 				60DF62CE26C1592100B8A83F /* MenuViewController.swift in Sources */,
+				603E76FD26D27E7300BE0FDD /* MenuListCell.swift in Sources */,
 				60F0E41D26C56E19007412D4 /* CameraViewController.swift in Sources */,
 				60DF62CA26C1592100B8A83F /* AppDelegate.swift in Sources */,
 				60DF62CC26C1592100B8A83F /* SceneDelegate.swift in Sources */,
 				60F0E43126C576B1007412D4 /* MenuPointCell.swift in Sources */,
 				60F0E41F26C56E25007412D4 /* LikedViewController.swift in Sources */,
-				605B31B026C6D1B500FBD49E /* SearchCell.swift in Sources */,
 				60F0E43D26C57CFF007412D4 /* MenuHeaderReusbleView.swift in Sources */,
 				602A494326C5842B00C637D7 /* CALayer + Extension.swift in Sources */,
 				60F0E42E26C5745E007412D4 /* HeaderItems.swift in Sources */,

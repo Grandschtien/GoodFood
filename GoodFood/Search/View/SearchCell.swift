@@ -1,8 +1,8 @@
 //
-//  SearchCell.swift
+//  SearchhCell.swift
 //  GoodFood
 //
-//  Created by Егор Шкарин on 13.08.2021.
+//  Created by Егор Шкарин on 14.08.2021.
 //
 
 import UIKit
@@ -14,7 +14,8 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var rating: UILabel!
     
-    
+    static let reuseId = "SearchCell"
+    static let nibName = "SearchCell"
     func configure(menuPoint: MenuPoint) {
         self.name.text = menuPoint.name
         self.time.text = menuPoint.time ?? "0" + " мин."

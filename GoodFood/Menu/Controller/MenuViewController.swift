@@ -40,7 +40,7 @@ class MenuViewController: UIViewController {
     private func configure() {
         menuCollection = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         menuCollection?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        menuCollection?.backgroundColor = #colorLiteral(red: 0.880524771, green: 0.9031272657, blue: 0.875127862, alpha: 1)
+        menuCollection?.backgroundColor = UIColor(red: 0.938, green: 0.938, blue: 0.938, alpha: 1)
         navigationController?.navigationBar.barTintColor = menuCollection.backgroundColor
         view.addSubview(menuCollection!)
         menuCollection.showsVerticalScrollIndicator = false
@@ -72,19 +72,20 @@ extension MenuViewController {
     private func createMenuPointSection() -> NSCollectionLayoutSection {
         
         //Item
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
         //Group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.25))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
         
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         //Section
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0)
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 0)
         //Section Decoration
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: MenuViewController.sectionBackgroundDecorationElementKind)
+        sectionBackgroundDecoration.contentInsets = NSDirectionalEdgeInsets(top: 120, leading: 0, bottom: 0, trailing: 0)
         section.decorationItems = [sectionBackgroundDecoration]
         let header = createHeader()
         section.boundarySupplementaryItems = [header]
@@ -144,6 +145,7 @@ extension MenuViewController {
     private func createHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        //header.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 100, trailing: 0)
         header.pinToVisibleBounds = true
         header.zIndex = 2
         return header

@@ -18,9 +18,9 @@ class MenuHeaderReusbleView: UICollectionReusableView {
         //kitchenCollection.delegate = self
         kitchenCollection.dataSource = self
         kitchenCollection.register(UINib(nibName: HeaderCell.nibName, bundle: nil), forCellWithReuseIdentifier: HeaderCell.reuseId)
-        kitchenCollection.backgroundColor = #colorLiteral(red: 0.880524771, green: 0.9031272657, blue: 0.875127862, alpha: 1)
-        kitchenCollection.alpha = 1
+        kitchenCollection.backgroundColor = UIColor(red: 0.938, green: 0.938, blue: 0.938, alpha: 1)
         kitchenCollection.reloadData()
+        self.dropShadow()
     }
     
     override func awakeFromNib() {
