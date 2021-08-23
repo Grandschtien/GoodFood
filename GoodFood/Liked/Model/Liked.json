@@ -1,0 +1,39 @@
+{
+    "type": "Liked",
+    "likedModels": [{
+        "name": "Курица-гриль",
+        "rating": "4",
+        "difficualty": "4",
+        "time": "20-25",
+        "image": "Курица"
+    },
+        {
+            "name": "Булочки с начинкой",
+            "rating": "5",
+            "difficualty": "3",
+            "time": "10",
+            "image": "Булки"
+        },
+        {
+            "name": "Котлеты с картошкой",
+            "rating": "3",
+            "difficualty": "4",
+            "time": "20",
+            "image": "Котлеты"
+        },
+        {
+            "name": "Лосось с приправами",
+            "rating": "5",
+            "difficualty": "10",
+            "time": "40",
+            "image": "Лосось"
+        },
+        {
+            "name": "Стейк",
+            "rating": "4",
+            "difficualty": "7",
+            "time": "20-25",
+            "image": "Стейк"
+        }
+    ]
+}
