@@ -22,6 +22,7 @@ class HeaderCell: UICollectionViewCell {
         self.kitchenLabel.textAlignment = .center
         self.kitchenLabel.font.withSize(15)
         self.layer.cornerRadius = self.frame.size.height / 2
+        self.kitchenLabel.textColor = #colorLiteral(red: 0.03235803469, green: 0.03235803469, blue: 0.03235803469, alpha: 1)
         self.backgroundColor = UIColor(red: 0.773, green: 0.859, blue: 0.984, alpha: 1)
     }
 }

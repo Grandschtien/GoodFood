@@ -18,7 +18,7 @@ class MenuHeaderReusbleView: UICollectionReusableView {
         //kitchenCollection.delegate = self
         kitchenCollection.dataSource = self
         kitchenCollection.register(UINib(nibName: HeaderCell.nibName, bundle: nil), forCellWithReuseIdentifier: HeaderCell.reuseId)
-        kitchenCollection.backgroundColor = UIColor(red: 0.938, green: 0.938, blue: 0.938, alpha: 1)
+        kitchenCollection.backgroundColor = UIColor(named: "MenuCollectionColor")
         kitchenCollection.reloadData()
         self.dropShadow()
     }

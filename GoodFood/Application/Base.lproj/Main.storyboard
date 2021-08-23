@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IuL-kT-afa">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,7 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ole-dn-5el"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.19224050640000001" green="0.1921200156" blue="0.2003292441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Поиск" id="lV6-0z-jaE"/>
                 </viewController>
@@ -45,7 +46,9 @@
                             <constraint firstItem="UcC-qm-CqU" firstAttribute="leading" secondItem="fSI-fR-q3E" secondAttribute="leading" constant="57" id="ndY-Yy-NRk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Камера" image="Camera" id="a9a-fG-aSY"/>
+                    <tabBarItem key="tabBarItem" title="Камера" image="Camera" id="a9a-fG-aSY">
+                        <color key="badgeColor" systemColor="systemBackgroundColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="xUK-A6-WW6"/>
                     <connections>
                         <outlet property="imageView" destination="UcC-qm-CqU" id="lBu-aw-Mhq"/>
@@ -93,34 +96,42 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Почта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFC-K4-uF6">
                                                         <rect key="frame" x="0.0" y="0.0" width="344" height="18"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Dosamarvis@gmail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e58-B3-hap">
                                                         <rect key="frame" x="0.0" y="26" width="344" height="34"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wR9-p1-Hcx">
                                                 <rect key="frame" x="0.0" y="72" width="344" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-a3-9zI">
                                                         <rect key="frame" x="0.0" y="0.0" width="344" height="18"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="8(985)2673176" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1o-o7-B8c">
                                                         <rect key="frame" x="0.0" y="26" width="344" height="34"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                             </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiP-a5-Zwd">
                                         <rect key="frame" x="0.0" y="252" width="342" height="60"/>
@@ -137,6 +148,8 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OiP-a5-Zwd" secondAttribute="trailing" constant="2" id="Ox5-mB-Ojn"/>
                                     <constraint firstAttribute="trailing" secondItem="tJk-f4-Jip" secondAttribute="trailing" id="dPG-EG-klm"/>
@@ -144,7 +157,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FuY-zY-spP"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IaA-jQ-cRb" firstAttribute="top" secondItem="FuY-zY-spP" secondAttribute="top" constant="24" id="0mc-fa-6dB"/>
                             <constraint firstItem="tJk-f4-Jip" firstAttribute="top" secondItem="IaA-jQ-cRb" secondAttribute="bottom" constant="77" id="4cd-h5-yRf"/>
@@ -184,7 +197,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0fd-dg-eIx">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LikedCell" rowHeight="153" id="Gst-3y-Wh2" customClass="LikedCell" customModule="GoodFood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
@@ -253,6 +266,7 @@
                                                 <constraint firstItem="GiT-mD-dRj" firstAttribute="leading" secondItem="VPq-6U-vVG" secondAttribute="leading" constant="10" id="Ume-yo-2Vy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         <connections>
                                             <outlet property="difficultyLabel" destination="S4Z-hR-Fbh" id="RfE-Ro-kXz"/>
                                             <outlet property="likedImageView" destination="90v-5l-XNx" id="NTL-eO-kz6"/>
@@ -265,7 +279,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nUd-IR-2kE"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0fd-dg-eIx" firstAttribute="bottom" secondItem="nUd-IR-2kE" secondAttribute="bottom" id="3Cv-IX-r41"/>
                             <constraint firstItem="0fd-dg-eIx" firstAttribute="trailing" secondItem="nUd-IR-2kE" secondAttribute="trailing" id="a3a-Ut-WkU"/>
@@ -302,11 +316,14 @@
         <scene sceneID="03a-tL-4cG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eGi-mo-adk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Поиск" image="Vector" id="7UQ-Ze-NGc"/>
+                    <tabBarItem key="tabBarItem" title="Поиск" image="Vector" id="7UQ-Ze-NGc">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Py4-1m-ld5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -369,7 +386,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GrX-nE-cmm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Избранное" image="Vector-3" id="pe9-cz-gIX">
-                        <color key="badgeColor" red="0.087663515359999999" green="0.088180903140000003" blue="0.092182253259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o2Y-K4-hId">
@@ -415,6 +432,12 @@
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

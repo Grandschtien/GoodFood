@@ -31,6 +31,7 @@ class SearchViewController: UIViewController {
     private func setupTableView() {
         tableView.register(UINib(nibName: SearchCell.nibName, bundle: nil), forCellReuseIdentifier: SearchCell.reuseId)
         tableView.frame = view.bounds
+        tableView.backgroundColor = .tertiarySystemBackground
         view.addSubview(tableView)
     }
     private func setupSegmentedControl() {

@@ -40,7 +40,8 @@ class MenuViewController: UIViewController {
     private func configure() {
         menuCollection = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         menuCollection?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        menuCollection?.backgroundColor = UIColor(red: 0.938, green: 0.938, blue: 0.938, alpha: 1)
+        menuCollection?.backgroundColor = UIColor(named: "MenuCollectionColor")
+        self.view.backgroundColor = UIColor(named: "MenuCollectionColor")
         navigationController?.navigationBar.barTintColor = menuCollection.backgroundColor
         view.addSubview(menuCollection!)
         menuCollection.showsVerticalScrollIndicator = false

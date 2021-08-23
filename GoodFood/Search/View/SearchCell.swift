@@ -27,6 +27,7 @@ class SearchCell: UITableViewCell {
         //Настройки ячейки
         self.imageOfDish.contentMode = .scaleAspectFill
         self.imageOfDish?.clipsToBounds = true
+        self.backgroundColor = .tertiarySystemBackground
         self.imageOfDish.layer.cornerRadius = imageOfDish.frame.width / 2
     }
 }
