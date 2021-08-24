@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    private var indexPathForSelectedRow = IndexPath()
     private var searchController = UISearchController()
     private var segmentedControl = UISegmentedControl(items: [
         "С мясом",
@@ -24,13 +25,16 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.searchController = searchController
         searchController.delegate = self
-        tableView.dataSource = self
+
         setupTableView()
         setupSegmentedControl()
     }
     private func setupTableView() {
         tableView.register(UINib(nibName: SearchCell.nibName, bundle: nil), forCellReuseIdentifier: SearchCell.reuseId)
         tableView.frame = view.bounds
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         tableView.backgroundColor = .tertiarySystemBackground
         view.addSubview(tableView)
     }
@@ -55,6 +59,7 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchCell.reuseId, for: indexPath) as? SearchCell else { return UITableViewCell()}
         cell.configure(menuPoint: (menuPoints.first?.menuPoints?[indexPath.row])!)
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -70,6 +75,19 @@ extension SearchViewController: UISearchControllerDelegate {
 
 
 extension SearchViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexPathForSelectedRow = indexPath
+        passData()
+    }
 }
 
+extension SearchViewController {
+    private func passData() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let dishViewController = storyboard.instantiateViewController(identifier: "DishViewController") as? DishViewController else {
+            return
+        }
+        dishViewController.nameOfDish = menuPoints.first?.menuPoints?[indexPathForSelectedRow.row].name ?? "Без названия"
+        show(dishViewController, sender: nil)
+    }
+}

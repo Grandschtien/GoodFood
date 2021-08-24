@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IuL-kT-afa">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,14 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ole-dn-5el"/>
-                        <color key="backgroundColor" red="0.19224050640000001" green="0.1921200156" blue="0.2003292441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Поиск" id="lV6-0z-jaE"/>
+                    <connections>
+                        <segue destination="aWm-Ca-AdA" kind="show" identifier="searchSegue" id="PXi-Vd-dx4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9iX-JY-A5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-342.02898550724638" y="1597.7678571428571"/>
+            <point key="canvasLocation" x="-409" y="1561"/>
         </scene>
         <!--Камера-->
         <scene sceneID="EzS-4M-eex">
@@ -57,6 +60,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg8-Px-5G1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="469.56521739130437" y="1597.7678571428571"/>
+        </scene>
+        <!--Dish View Controller-->
+        <scene sceneID="w3S-jK-9pb">
+            <objects>
+                <viewController storyboardIdentifier="DishViewController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="lim-ub-7Vm" customClass="DishViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BeU-tt-kQE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="npC-Hu-aLj"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kqD-o0-7Wa">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="DRx-gg-BCk">
+                            <connections>
+                                <action selector="backAction:" destination="lim-ub-7Vm" id="PIf-1c-n0a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ufz-qi-9DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="3372"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="Hsv-7Z-k4X">
@@ -215,7 +240,7 @@
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="110" id="HfP-5S-YBm"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-M9-VWR">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-M9-VWR">
                                                             <rect key="frame" x="118" y="0.0" width="276" height="111"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-68-Q3E">
@@ -225,7 +250,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сложность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4Z-hR-Fbh">
-                                                                    <rect key="frame" x="0.0" y="36" width="276" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="34" width="276" height="20.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20.5" id="IIg-Ar-Pya"/>
                                                                     </constraints>
@@ -234,7 +259,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-GZ-zIz">
-                                                                    <rect key="frame" x="0.0" y="62.5" width="276" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="58.5" width="276" height="20.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20.5" id="uew-d7-ICl"/>
                                                                     </constraints>
@@ -243,7 +268,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uws-W8-pBr" customClass="CosmosView" customModule="Cosmos">
-                                                                    <rect key="frame" x="0.0" y="89" width="276" height="22"/>
+                                                                    <rect key="frame" x="0.0" y="83" width="276" height="28"/>
                                                                     <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -305,11 +330,12 @@
                     <navigationItem key="navigationItem" title="Избарнное" id="mam-V3-kN3"/>
                     <connections>
                         <outlet property="tableView" destination="0fd-dg-eIx" id="OA8-FC-Z91"/>
+                        <segue destination="aWm-Ca-AdA" kind="show" identifier="likedSegue" id="NqP-jh-Igh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otK-D1-Sjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139.130434782609" y="1597.7678571428571"/>
+            <point key="canvasLocation" x="2141" y="1598"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -322,10 +348,13 @@
                         <color key="backgroundColor" red="0.90878041585286462" green="0.90878041585286462" blue="0.90878041585286462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="scR-1X-wCI"/>
+                    <connections>
+                        <segue destination="aWm-Ca-AdA" kind="show" identifier="menuSegue" id="Ug9-d2-aeS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2602.898550724638" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="-1180" y="1578"/>
         </scene>
         <!--Поиск-->
         <scene sceneID="03a-tL-4cG">
@@ -434,9 +463,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bP9-xy-Wh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692.753623188406" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="-1233" y="881"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1T8-mZ-GmW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWm-Ca-AdA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pnY-tW-cmB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyu-fE-gwc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lim-ub-7Vm" kind="relationship" relationship="rootViewController" id="4VY-Ee-8aB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhN-RK-leW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="2671"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="uws-W8-pBr">
+            <size key="intrinsicContentSize" width="145" height="25"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="NqP-jh-Igh"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Camera" width="22" height="18"/>
         <image name="Vector" width="22" height="22"/>
@@ -450,6 +506,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

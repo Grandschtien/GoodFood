@@ -18,6 +18,7 @@ class MenuViewController: UIViewController {
     fileprivate var dataSource: UICollectionViewDiffableDataSource<MenuModel, MenuPoint>! = nil
     private static let sectionBackgroundDecorationElementKind = "background-element-kind"
     private static let sectionHeaderElementKind = "section-header-element-kind"
+    private var indexPathForSelectedRow = IndexPath()
     
     private var menuPoints = Bundle.main.decode([MenuModel].self, from: "Menu.json").filter { menuModel in
         return menuModel.type == MenuType.Menu.rawValue
@@ -46,6 +47,7 @@ class MenuViewController: UIViewController {
         view.addSubview(menuCollection!)
         menuCollection.showsVerticalScrollIndicator = false
         menuCollection.showsHorizontalScrollIndicator = false
+        menuCollection.delegate = self
     }
     
 }
@@ -141,7 +143,7 @@ extension MenuViewController {
     }
 }
 
-
+//MARK:- Create Header
 extension MenuViewController {
     private func createHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
@@ -153,5 +155,24 @@ extension MenuViewController {
     }
 }
 
+//MARK:- segue
+extension MenuViewController {
+    private func passData() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let dishViewController = storyboard.instantiateViewController(identifier: "DishViewController") as? DishViewController else {
+            return
+        }
+        dishViewController.nameOfDish = menuPoints.first?.menuPoints?[indexPathForSelectedRow.row].name ?? "Без названия"
+        show(dishViewController, sender: nil)
+    }
+}
+//MARK:- CollectioNview delegate
 
+extension MenuViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        indexPathForSelectedRow = indexPath
+        //print(indexPath)
+        passData()
+    }
+}
 

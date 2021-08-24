@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		602A494126C581B200C637D7 /* MenuBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A494026C581B200C637D7 /* MenuBackgroundReusableView.swift */; };
 		602A494326C5842B00C637D7 /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A494226C5842B00C637D7 /* CALayer + Extension.swift */; };
 		603E76FA26D2767300BE0FDD /* ShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E76F926D2767300BE0FDD /* ShadowExtension.swift */; };
+		605220FC26D53348008F014F /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605220FB26D53348008F014F /* DishViewController.swift */; };
 		605B31A626C6BEC500FBD49E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A526C6BEC500FBD49E /* CornerRadius.swift */; };
 		605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A826C6C3B300FBD49E /* HeaderCell.swift */; };
 		605B31AB26C6C3B300FBD49E /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605B31A926C6C3B300FBD49E /* HeaderCell.xib */; };
@@ -57,6 +58,7 @@
 		602A494026C581B200C637D7 /* MenuBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackgroundReusableView.swift; sourceTree = "<group>"; };
 		602A494226C5842B00C637D7 /* CALayer + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Extension.swift"; sourceTree = "<group>"; };
 		603E76F926D2767300BE0FDD /* ShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowExtension.swift; sourceTree = "<group>"; };
+		605220FB26D53348008F014F /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
 		605B31A526C6BEC500FBD49E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		605B31A826C6C3B300FBD49E /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		605B31A926C6C3B300FBD49E /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
@@ -199,6 +201,38 @@
 			path = FirstExample;
 			sourceTree = "<group>";
 		};
+		605220F726D5330E008F014F /* Dish */ = {
+			isa = PBXGroup;
+			children = (
+				605220FA26D53326008F014F /* Model */,
+				605220F926D53322008F014F /* View */,
+				605220F826D53318008F014F /* Controller */,
+			);
+			path = Dish;
+			sourceTree = "<group>";
+		};
+		605220F826D53318008F014F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				605220FB26D53348008F014F /* DishViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		605220F926D53322008F014F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		605220FA26D53326008F014F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		605B31A726C6C39F00FBD49E /* HeaderCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +280,7 @@
 		60DF62C826C1592100B8A83F /* GoodFood */ = {
 			isa = PBXGroup;
 			children = (
+				605220F726D5330E008F014F /* Dish */,
 				602A494426C586E500C637D7 /* Helpers */,
 				60DF62DD26C15A3B00B8A83F /* Application */,
 				60F0E41B26C56DD0007412D4 /* Camera */,
@@ -404,7 +439,6 @@
 				329EECCC51939CA0B85D13B7 /* Pods-GoodFood.debug.xcconfig */,
 				E17B14FCAAB70B6E70A6286E /* Pods-GoodFood.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -543,6 +577,7 @@
 				602A494126C581B200C637D7 /* MenuBackgroundReusableView.swift in Sources */,
 				6014915B26D3DA0F0097B2EC /* Profile.swift in Sources */,
 				60DF62CE26C1592100B8A83F /* MenuViewController.swift in Sources */,
+				605220FC26D53348008F014F /* DishViewController.swift in Sources */,
 				60F0E41D26C56E19007412D4 /* CameraViewController.swift in Sources */,
 				60DF62CA26C1592100B8A83F /* AppDelegate.swift in Sources */,
 				60DF62CC26C1592100B8A83F /* SceneDelegate.swift in Sources */,
