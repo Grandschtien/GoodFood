@@ -215,17 +215,17 @@
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="110" id="HfP-5S-YBm"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-M9-VWR">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-M9-VWR">
                                                             <rect key="frame" x="118" y="0.0" width="276" height="111"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-68-Q3E">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="276" height="22.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="276" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сложность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4Z-hR-Fbh">
-                                                                    <rect key="frame" x="0.0" y="31.5" width="276" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="36" width="276" height="20.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20.5" id="IIg-Ar-Pya"/>
                                                                     </constraints>
@@ -234,7 +234,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-GZ-zIz">
-                                                                    <rect key="frame" x="0.0" y="61" width="276" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="62.5" width="276" height="20.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20.5" id="uew-d7-ICl"/>
                                                                     </constraints>
@@ -242,15 +242,30 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEE-Ig-DSE">
-                                                                    <rect key="frame" x="0.0" y="90.5" width="276" height="20.5"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="20.5" id="e5r-FZ-7Ye"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uws-W8-pBr" customClass="CosmosView" customModule="Cosmos">
+                                                                    <rect key="frame" x="0.0" y="89" width="276" height="22"/>
+                                                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                            <real key="value" value="3"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                            <integer key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                            <real key="value" value="25"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                            <color key="value" red="0.99942404029999998" green="0.76693200076405155" blue="0.03540139408564992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                                            <color key="value" systemColor="tertiarySystemBackgroundColor"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                            <color key="value" systemColor="systemGrayColor"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
@@ -271,7 +286,7 @@
                                             <outlet property="difficultyLabel" destination="S4Z-hR-Fbh" id="RfE-Ro-kXz"/>
                                             <outlet property="likedImageView" destination="90v-5l-XNx" id="NTL-eO-kz6"/>
                                             <outlet property="nameLabel" destination="aQy-68-Q3E" id="XGO-Rb-guS"/>
-                                            <outlet property="ratingLabel" destination="cEE-Ig-DSE" id="v98-IG-v23"/>
+                                            <outlet property="rating" destination="uws-W8-pBr" id="jAw-35-pkd"/>
                                             <outlet property="timeLabel" destination="lgZ-GZ-zIz" id="nkc-Ud-HUz"/>
                                         </connections>
                                     </tableViewCell>
@@ -432,6 +447,9 @@
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

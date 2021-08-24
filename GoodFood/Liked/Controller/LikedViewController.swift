@@ -31,6 +31,7 @@ extension LikedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LikedCell.reuseId) as? LikedCell else { return UITableViewCell()}
         guard let liked = liked.likedModels?[indexPath.row] else { return UITableViewCell()}
+        cell.isUserInteractionEnabled = false
         cell.configure(likedModel: liked)
         return cell
         
@@ -40,5 +41,7 @@ extension LikedViewController: UITableViewDataSource {
 }
 
 extension LikedViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

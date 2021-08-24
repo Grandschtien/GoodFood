@@ -6,13 +6,13 @@
 //
 
 import UIKit
-
+import Cosmos
 class SearchCell: UITableViewCell {
     @IBOutlet weak var imageOfDish: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var difficulty: UILabel!
     @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var rating: CosmosView!
     
     static let reuseId = "SearchCell"
     static let nibName = "SearchCell"
@@ -20,7 +20,7 @@ class SearchCell: UITableViewCell {
         self.name.text = menuPoint.name
         self.time.text = "\(menuPoint.time ?? "0") мин."
         self.difficulty.text = "Сложность: \(menuPoint.difficualty ?? "0")/10"
-        self.rating.text = "\(menuPoint.rating ?? "0")/5"
+        self.rating.rating = Double(menuPoint.rating ?? "0") ?? 0
         //TODO: Сделать через тип data
         self.imageOfDish.image = UIImage(named: menuPoint.image ?? "photo.fill")
         

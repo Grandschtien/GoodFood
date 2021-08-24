@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Cosmos
 class MenuPointCell: UICollectionViewCell {
     static let nibName = "MenuPointCell"
     
@@ -14,7 +14,7 @@ class MenuPointCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var difficulty: UILabel!
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var rating: CosmosView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,7 @@ class MenuPointCell: UICollectionViewCell {
         self.name.text = menuPoint.name
         self.time.text = "\(menuPoint.time ?? "0") мин."
         self.difficulty.text = "Сложность: \(menuPoint.difficualty ?? "0")/10"
-        self.rating.text = "\(menuPoint.rating ?? "0")/5"
+        self.rating.rating = Double(menuPoint.rating ?? "0") ?? 0
         //TODO: Сделать через тип data
         self.image.image = UIImage(named: menuPoint.image ?? "")
         self.image.contentMode = .scaleAspectFill

@@ -41,9 +41,12 @@
 		60F0E43626C57978007412D4 /* Menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 60F0E43526C57978007412D4 /* Menu.json */; };
 		60F0E43D26C57CFF007412D4 /* MenuHeaderReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F0E43B26C57CFF007412D4 /* MenuHeaderReusbleView.swift */; };
 		60F0E43E26C57CFF007412D4 /* MenuHeaderReusbleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F0E43C26C57CFF007412D4 /* MenuHeaderReusbleView.xib */; };
+		63D6F862CAC3D6E5DE938286 /* Pods_GoodFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC4DFB468F4ACB0F664C62 /* Pods_GoodFood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AEC4DFB468F4ACB0F664C62 /* Pods_GoodFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		329EECCC51939CA0B85D13B7 /* Pods-GoodFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodFood.debug.xcconfig"; path = "Target Support Files/Pods-GoodFood/Pods-GoodFood.debug.xcconfig"; sourceTree = "<group>"; };
 		6014915326D3CCC30097B2EC /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		6014915826D3DA050097B2EC /* Profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Profile.json; sourceTree = "<group>"; };
 		6014915A26D3DA0F0097B2EC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		60F0E43526C57978007412D4 /* Menu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Menu.json; sourceTree = "<group>"; };
 		60F0E43B26C57CFF007412D4 /* MenuHeaderReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderReusbleView.swift; sourceTree = "<group>"; };
 		60F0E43C26C57CFF007412D4 /* MenuHeaderReusbleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderReusbleView.xib; sourceTree = "<group>"; };
+		E17B14FCAAB70B6E70A6286E /* Pods-GoodFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodFood.release.xcconfig"; path = "Target Support Files/Pods-GoodFood/Pods-GoodFood.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D6F862CAC3D6E5DE938286 /* Pods_GoodFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +230,8 @@
 			children = (
 				60DF62C826C1592100B8A83F /* GoodFood */,
 				60DF62C726C1592100B8A83F /* Products */,
+				9B05A93DBE5E4BF653E11F01 /* Pods */,
+				75D3B8C697C9A1468A39BFDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,6 +390,24 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		75D3B8C697C9A1468A39BFDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AEC4DFB468F4ACB0F664C62 /* Pods_GoodFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B05A93DBE5E4BF653E11F01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				329EECCC51939CA0B85D13B7 /* Pods-GoodFood.debug.xcconfig */,
+				E17B14FCAAB70B6E70A6286E /* Pods-GoodFood.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -390,9 +415,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60DF62DA26C1592300B8A83F /* Build configuration list for PBXNativeTarget "GoodFood" */;
 			buildPhases = (
+				367ACDB05E86087F97B5E035 /* [CP] Check Pods Manifest.lock */,
 				60DF62C226C1592100B8A83F /* Sources */,
 				60DF62C326C1592100B8A83F /* Frameworks */,
 				60DF62C426C1592100B8A83F /* Resources */,
+				B1AA07DEFB78ABBF97AC85FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -454,6 +481,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		367ACDB05E86087F97B5E035 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1AA07DEFB78ABBF97AC85FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodFood/Pods-GoodFood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodFood/Pods-GoodFood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodFood/Pods-GoodFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60DF62C226C1592100B8A83F /* Sources */ = {
@@ -627,6 +696,7 @@
 		};
 		60DF62DB26C1592300B8A83F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 329EECCC51939CA0B85D13B7 /* Pods-GoodFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -646,6 +716,7 @@
 		};
 		60DF62DC26C1592300B8A83F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E17B14FCAAB70B6E70A6286E /* Pods-GoodFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
