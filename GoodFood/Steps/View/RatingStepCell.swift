@@ -11,6 +11,7 @@ class RatingStepCell: UITableViewCell {
 
     @IBOutlet weak var rating: CosmosView!
     static let reuseId = "RatingStepCell"
+    static let nibName = "RatingStepCell"
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -29,7 +29,8 @@
 		6052211826D68373008F014F /* RatingStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052211626D68373008F014F /* RatingStepCell.swift */; };
 		6052211926D68373008F014F /* RatingStepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6052211726D68373008F014F /* RatingStepCell.xib */; };
 		6052211B26D687A6008F014F /* Steps.json in Resources */ = {isa = PBXBuildFile; fileRef = 6052211A26D687A6008F014F /* Steps.json */; };
-		6052211D26D6883F008F014F /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052211C26D6883F008F014F /* Step.swift */; };
+		6052211D26D6883F008F014F /* Cooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052211C26D6883F008F014F /* Cooking.swift */; };
+		6052211F26D6A373008F014F /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052211E26D6A372008F014F /* Step.swift */; };
 		605B31A626C6BEC500FBD49E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A526C6BEC500FBD49E /* CornerRadius.swift */; };
 		605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A826C6C3B300FBD49E /* HeaderCell.swift */; };
 		605B31AB26C6C3B300FBD49E /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605B31A926C6C3B300FBD49E /* HeaderCell.xib */; };
@@ -82,7 +83,8 @@
 		6052211626D68373008F014F /* RatingStepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStepCell.swift; sourceTree = "<group>"; };
 		6052211726D68373008F014F /* RatingStepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingStepCell.xib; sourceTree = "<group>"; };
 		6052211A26D687A6008F014F /* Steps.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Steps.json; sourceTree = "<group>"; };
-		6052211C26D6883F008F014F /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		6052211C26D6883F008F014F /* Cooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cooking.swift; sourceTree = "<group>"; };
+		6052211E26D6A372008F014F /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		605B31A526C6BEC500FBD49E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		605B31A826C6C3B300FBD49E /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		605B31A926C6C3B300FBD49E /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
@@ -238,36 +240,12 @@
 		605220F826D53318008F014F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				605220FF26D66202008F014F /* Model */,
-				605220FE26D661FE008F014F /* View */,
-				605220FD26D661F8008F014F /* Controller */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		605220F926D53322008F014F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		605220FA26D53326008F014F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		605220FD26D661F8008F014F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
 				605220FB26D53348008F014F /* DishViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		605220FE26D661FE008F014F /* View */ = {
+		605220F926D53322008F014F /* View */ = {
 			isa = PBXGroup;
 			children = (
 				6052210026D66222008F014F /* DishCell.swift */,
@@ -277,7 +255,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		605220FF26D66202008F014F /* Model */ = {
+		605220FA26D53326008F014F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				6052210826D67677008F014F /* dish.json */,
@@ -319,7 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				6052211A26D687A6008F014F /* Steps.json */,
-				6052211C26D6883F008F014F /* Step.swift */,
+				6052211C26D6883F008F014F /* Cooking.swift */,
+				6052211E26D6A372008F014F /* Step.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,10 +350,10 @@
 		60DF62C826C1592100B8A83F /* GoodFood */ = {
 			isa = PBXGroup;
 			children = (
+				60DF62DD26C15A3B00B8A83F /* Application */,
 				6052210E26D682F7008F014F /* Steps */,
 				605220F726D5330E008F014F /* Dish */,
 				602A494426C586E500C637D7 /* Helpers */,
-				60DF62DD26C15A3B00B8A83F /* Application */,
 				60F0E41B26C56DD0007412D4 /* Camera */,
 				60F0E41A26C56DC9007412D4 /* Liked */,
 				60F0E41926C56DAD007412D4 /* Profile */,
@@ -668,9 +647,10 @@
 				603E76FA26D2767300BE0FDD /* ShadowExtension.swift in Sources */,
 				60F0E42326C56E3E007412D4 /* SearchViewController.swift in Sources */,
 				6014915426D3CCC30097B2EC /* UITextField+Extension.swift in Sources */,
+				6052211F26D6A373008F014F /* Step.swift in Sources */,
 				605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */,
 				6052210B26D678D0008F014F /* Dish.swift in Sources */,
-				6052211D26D6883F008F014F /* Step.swift in Sources */,
+				6052211D26D6883F008F014F /* Cooking.swift in Sources */,
 				6052211526D68365008F014F /* StepCell.swift in Sources */,
 				60F0E42726C57406007412D4 /* MenuPoint.swift in Sources */,
 				6014916226D3DF7C0097B2EC /* LikedModel.swift in Sources */,

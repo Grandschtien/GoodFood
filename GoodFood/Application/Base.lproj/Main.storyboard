@@ -184,15 +184,15 @@
                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StepCell" rowHeight="117" id="Wn3-55-9Vx" customClass="StepCell" customModule="GoodFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="117"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StepCell" rowHeight="117.5" id="Wn3-55-9Vx" customClass="StepCell" customModule="GoodFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="117.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wn3-55-9Vx" id="OVX-dg-NwV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="117.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WJw-vm-MYI">
-                                                    <rect key="frame" x="10" y="10" width="394" height="97"/>
+                                                    <rect key="frame" x="10" y="10" width="394" height="97.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l2Y-ww-VG8">
                                                             <rect key="frame" x="0.0" y="0.0" width="150" height="97"/>
@@ -208,6 +208,9 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="97.5" id="Ds1-6k-2Hu"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -647,11 +650,6 @@
             <point key="canvasLocation" x="516" y="2671"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="uws-W8-pBr">
-            <size key="intrinsicContentSize" width="145" height="25"/>
-        </designable>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="NqP-jh-Igh"/>
     </inferredMetricsTieBreakers>

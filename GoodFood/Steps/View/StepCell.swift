@@ -16,8 +16,10 @@ class StepCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func configure() {
-        
+    func configure(step: Step) {
+        self.stepImage.image = UIImage(named: step.image ?? "photo.fill")
+        stepImage.contentMode = .scaleAspectFit
+        self.stepLabel.text = step.step
     }
 
 }

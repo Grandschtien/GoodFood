@@ -10,15 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="RatingStepCell" customModule="GoodFood" customModuleProvider="target">
+        <tableViewCell contentMode="center" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="RatingStepCell" customModule="GoodFood" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwf-VT-ejM" customClass="CosmosView" customModule="Cosmos">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jwf-VT-ejM" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="87" y="36" width="147" height="45"/>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -43,13 +43,14 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Jwf-VT-ejM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Gg-nZ-ahm"/>
-                    <constraint firstAttribute="bottom" secondItem="Jwf-VT-ejM" secondAttribute="bottom" id="4Sz-1c-TDD"/>
-                    <constraint firstAttribute="trailing" secondItem="Jwf-VT-ejM" secondAttribute="trailing" id="KlO-LU-47b"/>
-                    <constraint firstItem="Jwf-VT-ejM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KlP-Ur-McL"/>
+                    <constraint firstAttribute="trailing" secondItem="Jwf-VT-ejM" secondAttribute="trailing" constant="86" id="FAK-LE-AvT"/>
+                    <constraint firstAttribute="bottom" secondItem="Jwf-VT-ejM" secondAttribute="bottom" constant="36" id="ZNR-7d-kW1"/>
+                    <constraint firstItem="Jwf-VT-ejM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="a9j-2n-a4G"/>
+                    <constraint firstItem="Jwf-VT-ejM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="87" id="fKv-zU-wOJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
             <connections>
                 <outlet property="rating" destination="Jwf-VT-ejM" id="7ug-8z-Ovw"/>
             </connections>

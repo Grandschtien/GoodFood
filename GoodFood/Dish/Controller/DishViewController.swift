@@ -24,6 +24,8 @@ class DishViewController: UIViewController {
         title = nameOfDish
         navigationController?.tabBarItem.title = "Назад"
         navigationController?.navigationItem.rightBarButtonItem?.image = UIImage(systemName: "photo.fill")
+//        navigationController?.navigationBar.setBackgroundImage( UIImage(named: dish.first?.image ?? "photo.fill"), for: .default)
+//        navigationController?.navigationBar.contentMode = .scaleAspectFill
         setupImageView()
         dishTableView.dataSource = self
         dishTableView.delegate = self
