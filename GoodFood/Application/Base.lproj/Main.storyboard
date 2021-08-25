@@ -174,16 +174,17 @@
         <!--Приготовление-->
         <scene sceneID="9gr-hQ-DVu">
             <objects>
-                <viewController id="K2S-av-I35" sceneMemberID="viewController">
+                <viewController id="K2S-av-I35" customClass="StepsViewController" customModule="GoodFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7JC-RC-Ul5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PbW-UD-aEu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StepCell" rowHeight="117" id="Wn3-55-9Vx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StepCell" rowHeight="117" id="Wn3-55-9Vx" customClass="StepCell" customModule="GoodFood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wn3-55-9Vx" id="OVX-dg-NwV">
@@ -206,6 +207,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -216,6 +218,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="stepImage" destination="l2Y-ww-VG8" id="pLL-T3-cTi"/>
+                                            <outlet property="stepLabel" destination="VsM-HU-hA7" id="c5t-FZ-Eqb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -230,6 +237,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Приготовление" largeTitleDisplayMode="always" id="arJ-Rc-UtT"/>
+                    <connections>
+                        <outlet property="stepsTableView" destination="PbW-UD-aEu" id="4LX-9q-XTv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDp-xG-dVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

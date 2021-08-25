@@ -103,4 +103,9 @@ extension DishViewController {
     @objc private func recieveNotification() {
         performSegue(withIdentifier: "CookingSegue", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "CookingSegue", let destinatinVC = segue.destination as? StepsViewController else { return }
+        destinatinVC.nameOfCurrentDish = nameOfDish
+    }
 }
