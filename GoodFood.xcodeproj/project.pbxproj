@@ -18,6 +18,12 @@
 		602A494326C5842B00C637D7 /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A494226C5842B00C637D7 /* CALayer + Extension.swift */; };
 		603E76FA26D2767300BE0FDD /* ShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E76F926D2767300BE0FDD /* ShadowExtension.swift */; };
 		605220FC26D53348008F014F /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605220FB26D53348008F014F /* DishViewController.swift */; };
+		6052210126D66222008F014F /* DishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052210026D66222008F014F /* DishCell.swift */; };
+		6052210626D665E4008F014F /* DishStaticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052210426D665E4008F014F /* DishStaticCell.swift */; };
+		6052210726D665E4008F014F /* DishStaticCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6052210526D665E4008F014F /* DishStaticCell.xib */; };
+		6052210926D67677008F014F /* dish.json in Resources */ = {isa = PBXBuildFile; fileRef = 6052210826D67677008F014F /* dish.json */; };
+		6052210B26D678D0008F014F /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052210A26D678D0008F014F /* Dish.swift */; };
+		6052210D26D678FF008F014F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052210C26D678FF008F014F /* Ingredient.swift */; };
 		605B31A626C6BEC500FBD49E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A526C6BEC500FBD49E /* CornerRadius.swift */; };
 		605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B31A826C6C3B300FBD49E /* HeaderCell.swift */; };
 		605B31AB26C6C3B300FBD49E /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605B31A926C6C3B300FBD49E /* HeaderCell.xib */; };
@@ -59,6 +65,12 @@
 		602A494226C5842B00C637D7 /* CALayer + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Extension.swift"; sourceTree = "<group>"; };
 		603E76F926D2767300BE0FDD /* ShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowExtension.swift; sourceTree = "<group>"; };
 		605220FB26D53348008F014F /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
+		6052210026D66222008F014F /* DishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCell.swift; sourceTree = "<group>"; };
+		6052210426D665E4008F014F /* DishStaticCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStaticCell.swift; sourceTree = "<group>"; };
+		6052210526D665E4008F014F /* DishStaticCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishStaticCell.xib; sourceTree = "<group>"; };
+		6052210826D67677008F014F /* dish.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dish.json; sourceTree = "<group>"; };
+		6052210A26D678D0008F014F /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		6052210C26D678FF008F014F /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		605B31A526C6BEC500FBD49E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		605B31A826C6C3B300FBD49E /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		605B31A926C6C3B300FBD49E /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
@@ -214,7 +226,9 @@
 		605220F826D53318008F014F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				605220FB26D53348008F014F /* DishViewController.swift */,
+				605220FF26D66202008F014F /* Model */,
+				605220FE26D661FE008F014F /* View */,
+				605220FD26D661F8008F014F /* Controller */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -227,6 +241,65 @@
 			sourceTree = "<group>";
 		};
 		605220FA26D53326008F014F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		605220FD26D661F8008F014F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				605220FB26D53348008F014F /* DishViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		605220FE26D661FE008F014F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6052210026D66222008F014F /* DishCell.swift */,
+				6052210426D665E4008F014F /* DishStaticCell.swift */,
+				6052210526D665E4008F014F /* DishStaticCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		605220FF26D66202008F014F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6052210826D67677008F014F /* dish.json */,
+				6052210A26D678D0008F014F /* Dish.swift */,
+				6052210C26D678FF008F014F /* Ingredient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6052210E26D682F7008F014F /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				6052211126D6830C008F014F /* Model */,
+				6052211026D68308008F014F /* View */,
+				6052210F26D68300008F014F /* Controller */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		6052210F26D68300008F014F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6052211026D68308008F014F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6052211126D6830C008F014F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -280,6 +353,7 @@
 		60DF62C826C1592100B8A83F /* GoodFood */ = {
 			isa = PBXGroup;
 			children = (
+				6052210E26D682F7008F014F /* Steps */,
 				605220F726D5330E008F014F /* Dish */,
 				602A494426C586E500C637D7 /* Helpers */,
 				60DF62DD26C15A3B00B8A83F /* Application */,
@@ -502,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				605B31AB26C6C3B300FBD49E /* HeaderCell.xib in Resources */,
+				6052210926D67677008F014F /* dish.json in Resources */,
 				60F0E43E26C57CFF007412D4 /* MenuHeaderReusbleView.xib in Resources */,
 				60DF62D626C1592300B8A83F /* LaunchScreen.storyboard in Resources */,
 				60F0E43226C576B1007412D4 /* MenuPointCell.xib in Resources */,
@@ -511,6 +586,7 @@
 				60DF62D126C1592100B8A83F /* Main.storyboard in Resources */,
 				6014915926D3DA050097B2EC /* Profile.json in Resources */,
 				6014916426D3DFA40097B2EC /* Liked.json in Resources */,
+				6052210726D665E4008F014F /* DishStaticCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F0E42526C572B2007412D4 /* MenuModel.swift in Sources */,
+				6052210626D665E4008F014F /* DishStaticCell.swift in Sources */,
 				6014916026D3DEA20097B2EC /* LikedCell.swift in Sources */,
 				60F0E42126C56E2D007412D4 /* ProfileViewController.swift in Sources */,
 				60D2843F26C80569006F490A /* SearchCell.swift in Sources */,
@@ -571,14 +648,17 @@
 				60F0E42326C56E3E007412D4 /* SearchViewController.swift in Sources */,
 				6014915426D3CCC30097B2EC /* UITextField+Extension.swift in Sources */,
 				605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */,
+				6052210B26D678D0008F014F /* Dish.swift in Sources */,
 				60F0E42726C57406007412D4 /* MenuPoint.swift in Sources */,
 				6014916226D3DF7C0097B2EC /* LikedModel.swift in Sources */,
 				605B31A626C6BEC500FBD49E /* CornerRadius.swift in Sources */,
+				6052210126D66222008F014F /* DishCell.swift in Sources */,
 				602A494126C581B200C637D7 /* MenuBackgroundReusableView.swift in Sources */,
 				6014915B26D3DA0F0097B2EC /* Profile.swift in Sources */,
 				60DF62CE26C1592100B8A83F /* MenuViewController.swift in Sources */,
 				605220FC26D53348008F014F /* DishViewController.swift in Sources */,
 				60F0E41D26C56E19007412D4 /* CameraViewController.swift in Sources */,
+				6052210D26D678FF008F014F /* Ingredient.swift in Sources */,
 				60DF62CA26C1592100B8A83F /* AppDelegate.swift in Sources */,
 				60DF62CC26C1592100B8A83F /* SceneDelegate.swift in Sources */,
 				60F0E43126C576B1007412D4 /* MenuPointCell.swift in Sources */,
