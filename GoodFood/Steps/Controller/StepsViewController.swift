@@ -41,6 +41,9 @@ extension StepsViewController: UITableViewDataSource {
             return 1
         }
     }
+//    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = stepsTableView.dequeueReusableCell(withIdentifier: StepCell.reuseId) as? StepCell else { return UITableViewCell()}

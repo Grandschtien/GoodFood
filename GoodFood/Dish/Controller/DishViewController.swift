@@ -10,7 +10,6 @@ import UIKit
 class DishViewController: UIViewController {
     var nameOfDish: String = ""
     @IBOutlet weak var dishTableView: UITableView!
-    @IBOutlet weak var dishImage: UIImageView!
     @IBOutlet weak var likedButton: UIBarButtonItem!
     private var dish = [Dish]()
     private var isLiked = false
@@ -24,9 +23,6 @@ class DishViewController: UIViewController {
         title = nameOfDish
         navigationController?.tabBarItem.title = "Назад"
         navigationController?.navigationItem.rightBarButtonItem?.image = UIImage(systemName: "photo.fill")
-//        navigationController?.navigationBar.setBackgroundImage( UIImage(named: dish.first?.image ?? "photo.fill"), for: .default)
-//        navigationController?.navigationBar.contentMode = .scaleAspectFill
-        setupImageView()
         dishTableView.dataSource = self
         dishTableView.delegate = self
         dishTableView.register(UINib(nibName: DishStaticCell.nibName, bundle: nil), forCellReuseIdentifier: DishStaticCell.reuseId)
@@ -37,10 +33,6 @@ class DishViewController: UIViewController {
         dish = Bundle.main.decode([Dish].self, from: "dish.json").filter({ dish in
             return dish.name == nameOfDish
         })
-    }
-    private func setupImageView() {
-        self.dishImage.contentMode = .scaleAspectFill
-        self.dishImage.image = UIImage(named: dish.first?.image ?? "photo.fill")
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {
@@ -90,7 +82,25 @@ extension DishViewController: UITableViewDataSource {
         }
        
     }
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("ImageDishStaticCell", owner: self, options: nil)?.first as? ImageDishStaticCell
+        let image = dish.first?.image ?? ""
+        headerView?.configure(image: UIImage(named: image))
+        switch section {
+        case 0:
+            return headerView
+        default:
+            return nil
+        }
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 253
+        default:
+            return 0
+        }
+    }
     
 }
 //MARK:- Delegate

@@ -163,7 +163,8 @@ extension MenuViewController {
             return
         }
         dishViewController.nameOfDish = menuPoints.first?.menuPoints?[indexPathForSelectedRow.row].name ?? "Без названия"
-        show(dishViewController, sender: nil)
+        navigationController?.pushViewController(dishViewController, animated: true)
+//        show(dishViewController, sender: nil)
     }
 }
 //MARK:- CollectioNview delegate

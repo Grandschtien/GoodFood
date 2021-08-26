@@ -16,6 +16,8 @@
 		6014916626D3E0200097B2EC /* Liked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014916526D3E0200097B2EC /* Liked.swift */; };
 		602A494126C581B200C637D7 /* MenuBackgroundReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A494026C581B200C637D7 /* MenuBackgroundReusableView.swift */; };
 		602A494326C5842B00C637D7 /* CALayer + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A494226C5842B00C637D7 /* CALayer + Extension.swift */; };
+		602ECD1A26D7C4B00067B77F /* ImageDishStaticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602ECD1826D7C4B00067B77F /* ImageDishStaticCell.swift */; };
+		602ECD1B26D7C4B00067B77F /* ImageDishStaticCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602ECD1926D7C4B00067B77F /* ImageDishStaticCell.xib */; };
 		603E76FA26D2767300BE0FDD /* ShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E76F926D2767300BE0FDD /* ShadowExtension.swift */; };
 		605220FC26D53348008F014F /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605220FB26D53348008F014F /* DishViewController.swift */; };
 		6052210126D66222008F014F /* DishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052210026D66222008F014F /* DishCell.swift */; };
@@ -70,6 +72,8 @@
 		6014916526D3E0200097B2EC /* Liked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liked.swift; sourceTree = "<group>"; };
 		602A494026C581B200C637D7 /* MenuBackgroundReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackgroundReusableView.swift; sourceTree = "<group>"; };
 		602A494226C5842B00C637D7 /* CALayer + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Extension.swift"; sourceTree = "<group>"; };
+		602ECD1826D7C4B00067B77F /* ImageDishStaticCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDishStaticCell.swift; sourceTree = "<group>"; };
+		602ECD1926D7C4B00067B77F /* ImageDishStaticCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDishStaticCell.xib; sourceTree = "<group>"; };
 		603E76F926D2767300BE0FDD /* ShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowExtension.swift; sourceTree = "<group>"; };
 		605220FB26D53348008F014F /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
 		6052210026D66222008F014F /* DishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCell.swift; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 				6052210026D66222008F014F /* DishCell.swift */,
 				6052210426D665E4008F014F /* DishStaticCell.swift */,
 				6052210526D665E4008F014F /* DishStaticCell.xib */,
+				602ECD1826D7C4B00067B77F /* ImageDishStaticCell.swift */,
+				602ECD1926D7C4B00067B77F /* ImageDishStaticCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 				6052210926D67677008F014F /* dish.json in Resources */,
 				60F0E43E26C57CFF007412D4 /* MenuHeaderReusbleView.xib in Resources */,
 				6052211B26D687A6008F014F /* Steps.json in Resources */,
+				602ECD1B26D7C4B00067B77F /* ImageDishStaticCell.xib in Resources */,
 				6052211926D68373008F014F /* RatingStepCell.xib in Resources */,
 				60DF62D626C1592300B8A83F /* LaunchScreen.storyboard in Resources */,
 				60F0E43226C576B1007412D4 /* MenuPointCell.xib in Resources */,
@@ -651,6 +658,7 @@
 				605B31AA26C6C3B300FBD49E /* HeaderCell.swift in Sources */,
 				6052210B26D678D0008F014F /* Dish.swift in Sources */,
 				6052211D26D6883F008F014F /* Cooking.swift in Sources */,
+				602ECD1A26D7C4B00067B77F /* ImageDishStaticCell.swift in Sources */,
 				6052211526D68365008F014F /* StepCell.swift in Sources */,
 				60F0E42726C57406007412D4 /* MenuPoint.swift in Sources */,
 				6014916226D3DF7C0097B2EC /* LikedModel.swift in Sources */,
