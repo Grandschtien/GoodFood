@@ -21,7 +21,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Поиск" id="lV6-0z-jaE"/>
                     <connections>
-                        <segue destination="aWm-Ca-AdA" kind="show" identifier="searchSegue" id="PXi-Vd-dx4"/>
+                        <segue destination="lim-ub-7Vm" kind="show" identifier="searchSegue" id="yIT-O4-0oV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9iX-JY-A5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,11 +131,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kqD-o0-7Wa">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="DRx-gg-BCk">
-                            <connections>
-                                <action selector="backAction:" destination="lim-ub-7Vm" id="PIf-1c-n0a"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="star" catalog="system" id="hd7-5Q-XWk">
                             <color key="tintColor" red="0.99942404029999998" green="0.76693200080000001" blue="0.035401394090000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -151,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufz-qi-9DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="3372"/>
+            <point key="canvasLocation" x="36" y="2872"/>
         </scene>
         <!--Приготовление-->
         <scene sceneID="9gr-hQ-DVu">
@@ -226,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDp-xG-dVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.9275362318842" y="3371.6517857142858"/>
+            <point key="canvasLocation" x="1287" y="2871"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="Hsv-7Z-k4X">
@@ -475,7 +470,7 @@
                     <navigationItem key="navigationItem" title="Избарнное" id="mam-V3-kN3"/>
                     <connections>
                         <outlet property="tableView" destination="0fd-dg-eIx" id="OA8-FC-Z91"/>
-                        <segue destination="aWm-Ca-AdA" kind="show" identifier="likedSegue" id="NqP-jh-Igh"/>
+                        <segue destination="lim-ub-7Vm" kind="show" identifier="likedSegue" id="dag-jJ-i0o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otK-D1-Sjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -494,7 +489,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="scR-1X-wCI"/>
                     <connections>
-                        <segue destination="aWm-Ca-AdA" kind="show" identifier="menuSegue" id="Ug9-d2-aeS"/>
+                        <segue destination="lim-ub-7Vm" kind="show" identifier="menuSegue" id="ykj-UP-iW3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -610,25 +605,6 @@
             </objects>
             <point key="canvasLocation" x="-1233" y="881"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="1T8-mZ-GmW">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWm-Ca-AdA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="pnY-tW-cmB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyu-fE-gwc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lim-ub-7Vm" kind="relationship" relationship="rootViewController" id="4VY-Ee-8aB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yhN-RK-leW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="516" y="2671"/>
-        </scene>
     </scenes>
     <designables>
         <designable name="uws-W8-pBr">
@@ -636,7 +612,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Ug9-d2-aeS"/>
+        <segue reference="dag-jJ-i0o"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Camera" width="22" height="18"/>

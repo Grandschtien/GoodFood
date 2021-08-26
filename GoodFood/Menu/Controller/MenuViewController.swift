@@ -157,14 +157,11 @@ extension MenuViewController {
 
 //MARK:- segue
 extension MenuViewController {
-    private func passData() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let dishViewController = storyboard.instantiateViewController(identifier: "DishViewController") as? DishViewController else {
-            return
-        }
-        dishViewController.nameOfDish = menuPoints.first?.menuPoints?[indexPathForSelectedRow.row].name ?? "Без названия"
-        navigationController?.pushViewController(dishViewController, animated: true)
-//        show(dishViewController, sender: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard  segue.identifier == "menuSegue", let destinationVC = segue.destination as? DishViewController else { return }
+        
+        destinationVC.nameOfDish = menuPoints.first?.menuPoints?[indexPathForSelectedRow.row].name ?? "Без названия"
+        
     }
 }
 //MARK:- CollectioNview delegate
@@ -172,8 +169,8 @@ extension MenuViewController {
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         indexPathForSelectedRow = indexPath
-        //print(indexPath)
-        passData()
+        
+        performSegue(withIdentifier: "menuSegue", sender: nil)
     }
 }
 

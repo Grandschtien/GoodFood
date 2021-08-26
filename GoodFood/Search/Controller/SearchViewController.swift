@@ -77,17 +77,15 @@ extension SearchViewController: UISearchControllerDelegate {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexPathForSelectedRow = indexPath
-        passData()
+        performSegue(withIdentifier: "searchSegue", sender: nil)
     }
 }
 
 extension SearchViewController {
-    private func passData() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let dishViewController = storyboard.instantiateViewController(identifier: "DishViewController") as? DishViewController else {
-            return
-        }
-        dishViewController.nameOfDish = menuPoints.first?.menuPoints?[indexPathForSelectedRow.row].name ?? "Без названия"
-        show(dishViewController, sender: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard  segue.identifier == "searchSegue", let destinationVC = segue.destination as? DishViewController else { return }
+        
+        destinationVC.nameOfDish = menuPoints.first?.menuPoints?[indexPathForSelectedRow.row].name ?? "Без названия"
+        
     }
 }

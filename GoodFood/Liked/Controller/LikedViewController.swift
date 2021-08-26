@@ -45,19 +45,15 @@ extension LikedViewController: UITableViewDataSource {
 extension LikedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexPathForSelectedRow = indexPath
-        passData()
+        performSegue(withIdentifier: "likedSegue", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 //MARK:- Segue
 extension LikedViewController {
-    private func passData() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let dishViewController = storyboard.instantiateViewController(identifier: "DishViewController") as? DishViewController else {
-            return
-        }
-        dishViewController.nameOfDish = liked.likedModels?[indexPathForSelectedRow.row].name ?? "Без названия"
-        show(dishViewController, sender: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard  segue.identifier == "likedSegue", let destinationVC = segue.destination as? DishViewController else { return }
+        destinationVC.nameOfDish = liked.likedModels?[indexPathForSelectedRow.row].name ?? "Без названия"
     }
 }
